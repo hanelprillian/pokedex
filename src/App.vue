@@ -14,8 +14,12 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 body {
   font-family: 'Montserrat', sans-serif;
+}
+
+.btn {
+  border-radius: 18px;
 }
 </style>

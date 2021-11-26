@@ -1,5 +1,6 @@
 import axios from 'axios'
 const state = () => ({
+    favorites: [],
     pokeApiNextUrl: 'a'
 })
 
@@ -11,13 +12,11 @@ const actions = {
             const { params = {} } = payload
             axios.get(state.pokeApiNextUrl, {
                 params
+            }).then((response) => {
+                resolve(response.data)
+            }).catch((error) => {
+                reject(error)
             })
-                .then((response) => {
-                    resolve(response.data)
-                })
-                .catch((error) => {
-                    reject(error)
-                })
         })
     }
 }
@@ -25,6 +24,9 @@ const actions = {
 const mutations = {
     setNextApiUrl (state, url) {
         state.pokeApiNextUrl = url
+    },
+    addFav (state, data) {
+        state.favorites.push(data)
     },
 }
 

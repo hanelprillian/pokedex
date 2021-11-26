@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand mr-4" href="#"><img src="../assets/logo.svg"></a>
+      <router-link to="/"><a class="navbar-brand mr-4" href="#"><img src="../assets/logo.svg"></a></router-link>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -17,7 +17,7 @@
         </form>
         <ul class="navbar-nav ">
           <li class="nav-item active">
-            <a class="nav-link my-favorite-btn font-weight-bold" href="#"><img src="../assets/fav-active-icon.svg" class="mr-2"> My Favorite (0)</a>
+            <router-link to="/favorite" class="nav-link my-favorite-btn font-weight-bold" href="#"><img src="../assets/fav-active-icon.svg" class="mr-2"> My Favorite (0)</router-link>
           </li>
         </ul>
       </div>
@@ -42,6 +42,8 @@ export default {
       await store.commit('pokemon/setNextApiUrl', `https://pokeapi.co/api/v2/pokemon/${keyword.value}`)
       await store.dispatch('pokemon/getAllPokemon', {}).then(() => {
         router.push(`/pokemon/${keyword.value}`)
+      }).catch(() => {
+        alert('data not found')
       })
     }
 
