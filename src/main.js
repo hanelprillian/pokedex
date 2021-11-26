@@ -8,9 +8,11 @@ window.axios = require('axios').default
 
 import App from './App.vue'
 import Home from './pages/Home'
+import Favorite from './pages/Favorite'
 
 const routes = [
     { path: '/', component: Home },
+    { path: '/favorite', component: Favorite },
 ]
 
 const router = createRouter({

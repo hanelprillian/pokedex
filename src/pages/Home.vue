@@ -1,5 +1,8 @@
 <template>
   <div class="container">
+    <div class="page-title mb-4">
+      List Pokemon
+    </div>
     <div class="btn-group btn-types mb-5 hidden-scrollbar" role="group" aria-label="Basic example">
       <button type="button" class="btn" @click="filterByType('')" :class="{'btn-primary' : selectedType === '', 'btn-outline-secondary' : selectedType !== ''}">All</button>
       <button type="button" v-for="(d, i) in listTypes" :key="i" @click="filterByType(d.id)"

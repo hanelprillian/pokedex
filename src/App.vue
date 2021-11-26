@@ -31,5 +31,11 @@ body {
 .hidden-scrollbar::-webkit-scrollbar {
   display: none;
 }
-
+.page-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 21px;
+  color: #646464;
+}
 </style>
