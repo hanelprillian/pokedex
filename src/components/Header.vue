@@ -17,7 +17,7 @@
         </form>
         <ul class="navbar-nav ">
           <li class="nav-item active">
-            <router-link to="/favorite" class="nav-link my-favorite-btn font-weight-bold" href="#"><img src="../assets/fav-active-icon.svg" class="mr-2"> My Favorite (0)</router-link>
+            <router-link to="/favorite" class="nav-link my-favorite-btn font-weight-bold" href="#"><img src="../assets/fav-active-icon.svg" class="mr-2"> My Favorite ({{ $store.state.pokemon.favorites.length }})</router-link>
           </li>
         </ul>
       </div>

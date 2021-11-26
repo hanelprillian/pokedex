@@ -22,4 +22,14 @@ body {
 .btn {
   border-radius: 18px;
 }
+
+.hidden-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.hidden-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 </style>
