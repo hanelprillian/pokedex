@@ -1,4 +1,5 @@
 # pokedex
+Made by <strong>Vue 3, Bootstrap 4</strong>
 
 ## Project setup
 ```
