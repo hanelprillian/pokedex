@@ -39,7 +39,7 @@ export default {
       return store.state.pokemon.favorites.filter(obj => obj.id === props.data.id).length > 0
     })
 
-    const toggleFav = async () => {
+    const toggleFav = () => {
       if(isFav.value) {
         store.commit('pokemon/removeFav', props.data.id)
       } else {
